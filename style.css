@@ -109,6 +109,7 @@ nav ul li a:hover{
     margin: 1em;
     color: rgb(255, 204, 102);
     font-size: 1.2em;
+    font-family: "Englebert", serif;
 }
 
 .homeMainContent {
@@ -130,11 +131,13 @@ nav ul li a:hover{
     display: flex;
     justify-content: center;
     color: rgb(236, 243, 203);
+    
 }
 
 .mainText {
     color: #fdf0d6;
     font-size: 1.1em;
+    font-family: "Englebert", serif;
 }
 
 .inlineLink {
