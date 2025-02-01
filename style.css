@@ -208,7 +208,7 @@ nav ul li a:hover{
 .ctaButton {
     background-color: #4da6ff;
     color: white;
-    padding: 2% 5%;
+    padding: 1% 1%;
     font-size: 1em;
     text-decoration: none;
     border-radius: 0.3125em;
@@ -256,7 +256,7 @@ nav ul li a:hover{
         padding: 15px;
     }
 }
-
+/* footer slutar */
 
 
 
