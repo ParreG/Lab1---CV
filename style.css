@@ -241,6 +241,7 @@ nav ul li a:hover{
 #aboutHeading{
     color: rgb(236, 243, 203);
     font-family: "Emblema One", serif;
+    display: inline;
 }
 
 strong{
@@ -252,6 +253,7 @@ strong{
     font-size: 1.1em;
     font-family: "Englebert", serif;
 }
+/* main about Slutar */
 
 
 
@@ -267,6 +269,8 @@ strong{
 
 
 
+
+/* Media query för alla sidor! */
 @media (max-width: 600px) {
     header {
         height: 30em;
@@ -291,6 +295,35 @@ strong{
         font-size: 14px;
         padding: 15px;
     }
+
+    .aboutMain{
+        padding: 1em;
+    }
+    
+    .aboutMainContent {
+        
+        padding: 1em;
+        margin: 0.8em;
+        color: white;
+        font-size: 1.0em;
+    }
+    
+    #aboutHeading{
+        color: rgb(236, 243, 203);
+        font-family: "Emblema One", serif;
+        font-size: 190%;
+    }
+    
+    strong{
+        font-size: large;
+    }
+    
+    .aboutMainText {
+        
+        font-size: 1em;
+        
+    }
+    
 }
 
 
