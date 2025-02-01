@@ -39,11 +39,12 @@ nav ul li a{
 }
 
 nav ul li.currentSite{
-    background-color: rgb(0,255,255,0.5);
+    background-color: #ffcc00;
 }
 
 nav ul li:hover{
-    background-color: rgb(0,255,255, 0.5);
+    background-color: #ffcc00;
+    transform: scale(1.2);
 }
 nav ul li a:hover{
     color: black;
@@ -144,61 +145,102 @@ nav ul li a:hover{
 
 .inlineLink:hover {
     color: #ffcc00;
+    transform: scale(2.1em);
 }
 /* Main slutar */
 
 /* Footer börjar */
-
 .siteFooter {
-    grid-area: bottom;
-    background-color: #1a1a1a; 
-    color: #ffffff; 
+    background-color: #1a1a1a;
+    color: #ffffff;
     text-align: center;
-    padding: 20px;
-    font-size: 16px;
+    padding: 2% 5%;
+    font-size: 1.1em;
+    grid-area: bottom;
 }
 
-.footerContent p {
-    margin: 10px 0;
+.footerContent {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
-.footerContent a {
-    color: #4da6ff; 
+.footerLinks p {
+    margin: 1em 0;
+}
+
+.footerLinks a {
+    color: #4da6ff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-.footerContent a:hover {
-    color: #ffcc00; /* Guldgul hover-effekt */
+.footerLinks a:hover {
+    color: #ffcc00;
 }
 
+.socialLinks a {
+    margin: 0 2.5%;
+    display: inline-block;
+}
 
+.socialLinks i {
+    font-size: 2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
 
+.socialLinks i:hover {
+    color: #ffcc00;
+    transform: scale(1.2);
+}
 
+.footerQuote em {
+    font-size: 1.125em;
+    color: #ffcc00;
+    font-style: italic;
+}
 
+.footerCallToAction {
+    margin-top: 3%;
+}
 
+.ctaButton {
+    background-color: #4da6ff;
+    color: white;
+    padding: 2% 5%;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 0.3125em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
+.ctaButton:hover {
+    background-color: #ffcc00;
+    color: #1a1a1a;
+    transform: scale(1.1);
+}
 
+.footerBottom {
+    margin-top: 2em;
+    font-size: 0.875em;
+    color: #999999;
+}
 
-
-
-
-
-
-
-
+.footerBottom p {
+    margin: 0;
+}
 
 @media (max-width: 600px) {
-    header{
+    header {
         height: 30em;
     }
 
-    .aside-h3{
+    .aside-h3 {
         font-size: 1.5em;
     }
 
-    .grid-container{
+    .grid-container {
         min-height: 100vh;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -213,7 +255,6 @@ nav ul li a:hover{
         font-size: 14px;
         padding: 15px;
     }
-
 }
 
 
