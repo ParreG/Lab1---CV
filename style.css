@@ -17,17 +17,19 @@ header{
 }
 
 nav ul{
-    display: inline-block;
-    list-style: none;
     display: flex;
+    list-style: none;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 1em;
-    flex-wrap: wrap;
 }
 
+/* LÄGG EN POSITION FÖR KNAPPARNA? */
+
 nav ul li {
-    padding: 1em;
-    margin: 1em;
+    display: inline-block;
+    padding: 1.4em;
+    margin: 1.3em;
     background-color: rgb(0,0,255, 0.5);
     border-radius: 50%;
     transition: 0.5s;
@@ -41,14 +43,18 @@ nav ul li a{
 }
 
 nav ul li.currentSite{
-    background-color: #ffcd04;
+    background-color: #ffcd0493;
 }
 
 nav ul li:hover{
-    background-color: #ffcc00;
+    background-color: #ffcc0096;
     transform: scale(1.2);
 }
 nav ul li a:hover{
+    color: black;
+}
+
+.currentSite a{
     color: black;
 }
 
@@ -61,12 +67,19 @@ nav ul li a:hover{
     right: 2em;
     color: #474aff; 
     display: none;
+    transition: 0.6s;
 }
 
+#menu-toggle:hover {
+    color: yellow;
+}
+
+#menu-toggle.active
+{
+    color: yellow;
+}
 
 /* Header slutar */
-
-
 .grid-container{
     min-height: 100vh;
     display: grid;
@@ -94,6 +107,7 @@ nav ul li a:hover{
     padding: 1em;
     margin: 1em;
     color: white;
+    border-radius: 1em;
 }
 
 .aside-h3{
@@ -118,13 +132,14 @@ nav ul li a:hover{
 }
 
 .fun-fact{
-    /* background-color: rgba(0, 0, 0, 0.315); */
     padding: 1em;
     margin: 1em;
     color: rgb(255, 204, 102);
     font-size: 1.2em;
     font-family: "Englebert", serif;
     line-height: 1.8;
+    border: #5254ac solid 2px;
+    border-radius: 1em;
 }
 
 .homeMainContent {
@@ -277,35 +292,138 @@ strong{
 }
 /* main about Slutar */
 
+/* --------Main exprience börjar --------------- */
+
+
+
+/* Huvudsektionen med bakgrundsbild */
+.experienceMain {
+    color: #fdf0d6;
+    min-height: 100vh; 
+    background-image: url("work-picture.jpg");
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2em 0; 
+    overflow: hidden; 
+}
+
+
+.experienceDiv {
+    background-color: rgba(26, 26, 26, 0.8); 
+    padding: 3em;
+    width: 85%;
+    max-width: 1200px; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+
+.experienceHeader {
+    text-decoration: underline;
+    text-decoration-color: #474aff;
+    font-size: 5vw;
+    font-family: "Emblema One", serif;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+
+#gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+    margin-top: 2em;
+}
+
+
+.job {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2em;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+.job:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+.job h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    color: #ffffff;
+    font-family: "Emblema One", serif;
+}
+
+
+.job p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #fdf0d6;
+    font-family: "Englebert", serif;
+}
+
+.experienceDiv i {
+    color: #7476f5;
+}
+
+.experienceDiv strong {
+    color: #ffcc00;
+}
+
 
 
 
 /* Media query för alla sidor! */
-@media (max-width: 896px) {
+@media (max-width: 1160px) {
     header {
         height: 30em;
     }
 
 
     #menu-toggle {
-        display: block;
+        display: inline;
+        z-index: 1000;
+        position: fixed;
     }
+
 
     nav ul {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 6em;
-        right: 2em;
-        width: 10em;
-        padding: 10px;
-        border-radius: 10px;
-    }
-
-    nav ul li {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(71, 74, 255, 0.9);
         text-align: center;
-        margin: 10px 0;
+        justify-content: center; 
+        align-items: center; 
+        z-index: 999; 
     }
+    
+    nav ul li {
+        width: 80%; 
+        max-width: 15em; 
+        margin: 10px 0; 
+    }
+    
+    nav ul li a {
+        display: block;
+        width: 100%; /* Täcker hela `li` för att vara klickbar */
+        padding: 15px; 
+        text-decoration: none;
+        color: white;
+        border-radius: 5px;
+    }
+    
 
     .homeMainContent {
         line-height: 1.5;
@@ -362,6 +480,41 @@ strong{
     .aboutEnd{
         font-size: 1em;
     }
+
+
+    .experienceDiv {
+        width: 95%; 
+        padding: 2em; 
+    }
+
+    #gridContainer {
+        grid-template-columns: 1fr; 
+    }
+
+    .experienceHeader {
+        font-size: 7vw; 
+    }
+
+    .job {
+        padding: 1.5em;
+    }
+
+    .experienceMain {
+        padding: 1em 0;
+        background-size:cover ; 
+        background-position:right;
+
+    }
+}
+
+@media (max-width: 900px){
+    .experienceMain {
+        background-image: url("Body\ Bild.JPEG");
+        background-position: center; 
+        background-size: center; 
+    }
+
+
     
 }
 
