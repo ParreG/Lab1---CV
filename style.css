@@ -380,6 +380,85 @@ strong{
 
 
 
+/* --------------Kontakt main börjar här --------------- */
+#contactMain {
+    background-color: #001f3f; /* Mörkblå bakgrund */
+    font-family: 'Arial', sans-serif;
+    color: #fd0c0c;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+}
+
+.my-3 {
+    color: #001f3f;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+label {
+    color: #001f3f;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 2px solid #001f3f;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #f8f8f8;
+    color: #333;
+}
+
+input:focus, textarea:focus {
+    border-color: #ffcc00;
+    outline: none;
+    box-shadow: 0 0 5px #ffcc00;
+}
+
+button {
+    width: 100%;
+    background-color: #ffcc00;
+    color: #001f3f;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #e6b800;
+}
+
+.text-gray-400 {
+    color: #bbb !important;
+}
+
+.invalid-feedback {
+    display: none;
+
+}
+
+
 /* Media query för alla sidor! */
 @media (max-width: 1160px) {
     header {
