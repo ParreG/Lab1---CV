@@ -458,6 +458,54 @@ button:hover {
 
 }
 
+/* ------------------------TechDeck börjar här--------------- */
+#techdeck:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#techdeck {
+    text-align: center;
+    padding: 1em;
+    background-color: rgba(119, 118, 192, 0.295);
+    border-radius: 10px;
+}
+
+#techdeck h1 {
+    color: #001f3f;
+}
+
+#techdeck p, #techdeck ul {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ffcc00;
+}
+
+.projektOne img {
+    width: 100%;
+}
+
+.projektOne h3 {
+    text-align: center;
+}
+
+
+
 
 /* Media query för alla sidor! */
 @media (max-width: 1160px) {
