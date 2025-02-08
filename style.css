@@ -10,7 +10,7 @@
 header{
     background-color: rgb(0,191,255);
     height: 50em;
-    background-image: url("../Bilder/Header-bild.JPEG");
+    background-image: url("/Bilder/Header-bild.JPEG");
     background-size: cover;
     background-position: center;
     font-family: "Emblema One", serif;
@@ -95,7 +95,7 @@ nav ul li a:hover{
 .homeAside{
     background-color: royalblue;
     padding: 10%;
-    background-image: url("../Bilder/Aside-picture.JPEG");
+    background-image: url("/Bilder/Aside-picture.JPEG");
     background-size: cover;
     background-position: center;
     grid-area: left;
@@ -124,7 +124,7 @@ nav ul li a:hover{
     background-color: rgb(3, 255, 255);
     padding: 1em;
     grid-area: middle;
-    background-image: url("../Bilder/main2.jpg");
+    background-image: url("/Bilder/main2.jpg");
     background-size: cover;
     background-position: center;
     grid-area: middle;
@@ -254,7 +254,7 @@ nav ul li a:hover{
 .aboutMain{
     padding: 3em;
     grid-area: middle;
-    background-image: url("../Bilder/about-main.jpg");
+    background-image: url("/Bilder/about-main.jpg");
     background-size: cover;
     background-position: center;
     grid-area: middle;
@@ -300,7 +300,7 @@ strong{
 .experienceMain {
     color: #fdf0d6;
     min-height: 100vh; 
-    background-image: url("../Bilder/work-picture.jpg");
+    background-image: url("/Bilder/work-picture.jpg");
     background-size: cover;
     background-position: right;
     display: flex;
@@ -588,7 +588,7 @@ button:hover {
 
 @media (max-width: 900px){
     .experienceMain {
-        background-image: url("../Bilder/Body-Bild.JPEG");
+        background-image: url("/Bilder/Body-Bild.JPEG");
         background-position: center; 
         background-size: center; 
     }
