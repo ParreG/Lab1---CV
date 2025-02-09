@@ -17,7 +17,36 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// ------------------ Easter Egg ------------------ //
+document.addEventListener("DOMContentLoaded", function () {
+  const secretButton = document.getElementById("secret-button");
 
+  if (secretButton) {
+      secretButton.addEventListener("click", function () {
+          let overlay = document.getElementById("yellow-overlay");
+          if (!overlay) {
+              overlay = document.createElement("div");
+              overlay.id = "yellow-overlay";
+              document.body.appendChild(overlay);
+              secretButton.addEventListener("click", function () {
+                overlay.remove();
+              });
+          }
+      });
+  } else {
+      console.warn("Knappen hittades inte! Kontrollera HTML och att JavaScript-filen laddas.");
+  }
+
+  // Påskägg för tangentbordskombination "1337"
+  let sequence = "";
+  document.addEventListener("keydown", function (event) {
+      sequence += event.key;
+      if (sequence.includes("1337")) {
+          alert("Du hittade påskägget! 🎉");
+          sequence = ""; // Återställ sekvensen
+      }
+  });
+});
 
 // ------------------ KONTAKT SIDAN ------------------ //
 document.addEventListener("DOMContentLoaded", function () {

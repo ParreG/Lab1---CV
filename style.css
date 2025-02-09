@@ -6,6 +6,30 @@
 
 
 /* Main sidan börjar!! */
+#secret-button {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0; 
+    font-size: 1px; 
+    border: none; 
+    background: white; 
+    position: absolute; 
+    top: 10px; 
+    left: 10px;
+    cursor: pointer;
+}
+
+#yellow-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 0, 0.3); 
+    z-index: 9999; 
+    pointer-events: none;
+}
+
 /* Header börjar */
 header{
     background-color: rgb(0,191,255);
@@ -23,8 +47,6 @@ nav ul{
     justify-content: center;
     padding: 1em;
 }
-
-/* LÄGG EN POSITION FÖR KNAPPARNA? */
 
 nav ul li {
     display: inline-block;
@@ -250,7 +272,6 @@ nav ul li a:hover{
 /* Main sidan slutar */
 /* About sidan börjar */
 
-/* main about börjar */
 .aboutMain{
     padding: 3em;
     grid-area: middle;
@@ -271,7 +292,8 @@ nav ul li a:hover{
 #aboutHeading{
     color: rgb(236, 243, 203);
     font-family: "Emblema One", serif;
-    display: inline;
+    display: block;
+    text-align: center;
 }
 
 strong{
@@ -289,14 +311,12 @@ strong{
     color: rgb(236, 243, 203);
     font-size: 1.2em;
     font-family: "emblema One", serif;
+    text-align: center;
 }
 /* main about Slutar */
 
 /* --------Main exprience börjar --------------- */
 
-
-
-/* Huvudsektionen med bakgrundsbild */
 .experienceMain {
     color: #fdf0d6;
     min-height: 100vh; 
@@ -355,10 +375,11 @@ strong{
 
 
 .job h3 {
-    font-size: 1.8em;
+    font-size: 1.5vw;
     margin-bottom: 0.5em;
     color: #ffffff;
     font-family: "Emblema One", serif;
+    text-align: center;
 }
 
 
@@ -377,6 +398,158 @@ strong{
     color: #ffcc00;
 }
 
+/* ------------------------TechDeck börjar här--------------- */
+#techdeck:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#techdeck {
+    text-align: center;
+    padding: 1em;
+    background-color: rgba(119, 118, 192, 0.295);
+    border-radius: 10px;
+}
+
+#techdeck h1 {
+    color: #001f3f;
+}
+
+#techdeck p, #techdeck ul {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.projekt img {
+    width: 100%;
+    border-radius: 10%;
+}
+
+.projekt h3 {
+    text-align: center;
+}
+
+
+/* ------------------------------------------- POPUP --------------!*/
+.popup-container {
+    position: relative; 
+    width: 30em; 
+    height: 20em;
+    background: rgb(0, 0, 0);
+    overflow: hidden; /* Förhindrar att popupen går utanför */
+    padding: 20px;
+}
+
+.popup-button {
+    display: inline-block;
+    margin-top: 1em;
+    background: #4d45c7;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background 0.3s;
+    text-decoration: none;
+    padding: 0.7em;
+}
+
+.popup-button:hover {
+    background: #ffcc00;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+/* Popup-innehåll */
+.popup-content {
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+    color: #000000;
+}
+
+.popup-content p {
+    color: #000000;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+
+#popup1:target {
+    display: flex;
+}
+
+#popup2:target {
+    display: flex;
+}
+
+#popup3:target {
+    display: flex;
+}
+
+#popup4:target {
+    display: flex;
+}
+
+.close {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+
+
+    font-size: 2em;
+    color: #000000;
+    text-decoration: none;
+}
+
+.close:hover {
+    color: #ffcc00;
+}
+
+
+
+
+/* ------------------------------------------SLUT PÅ POPUP --------------------------------------- */
+
+/* ------ Början på github ikonen ------------- */
+.popupGithub {
+    display: flex;
+    justify-content: right;
+    margin-top: 1.5em;
+}
+
+.popupGithub a {
+    padding: 0.2;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.popupGithub a:hover {
+    transform: scale(1.2); /* Ökar storleken vid hover */
+}
+
+
+.popupGithub i {
+    font-size: 2em; /* Justerar storlek */
+    color: white; /* Vit färg för ikonen */
+}
 
 
 
@@ -458,56 +631,9 @@ button:hover {
 
 }
 
-/* ------------------------TechDeck börjar här--------------- */
-#techdeck:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.2);
-}
+/* --------------------    -------------------- */
 
-#techdeck {
-    text-align: center;
-    padding: 1em;
-    background-color: rgba(119, 118, 192, 0.295);
-    border-radius: 10px;
-}
-
-#techdeck h1 {
-    color: #001f3f;
-}
-
-#techdeck p, #techdeck ul {
-    color: #333;
-    font-size: 1.1rem;
-}
-
-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 1.2rem;
-}
-
-footer a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    color: #ffcc00;
-}
-
-.projektOne img {
-    width: 100%;
-}
-
-.projektOne h3 {
-    text-align: center;
-}
-
-
-
-
-/* Media query för alla sidor! */
+/* Media query 1 av 3 för alla sidor! */
 @media (max-width: 1160px) {
     header {
         height: 30em;
@@ -634,6 +760,7 @@ footer a:hover {
     }
 }
 
+/* Media query 2 av 3 */
 @media (max-width: 900px){
     .experienceMain {
         background-image: url("Body-Bild.JPEG");
@@ -644,6 +771,77 @@ footer a:hover {
 
     
 }
+
+
+@media screen and (max-width: 534px) {
+    .experienceMain {
+        background-position: center;
+        padding: 1em 0; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .experienceDiv {
+        width: 90%;
+        max-width: 350px; 
+        padding: 1.5em;
+        border-radius: 8px;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+    }
+
+    .experienceHeader {
+        font-size: 6vw;
+        text-align: center;
+    }
+
+    #gridContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin-top: 1em;
+        width: 100%;
+    }
+
+    .job {
+        padding: 1em;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+
+    .projekt h3, .job h3 {
+        font-size: 5.2vw;
+        text-align: center;
+    }
+
+    .job p {
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+
+    .projekt img {
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 5%;
+    }
+
+    #techdeck {
+        padding: 1em;
+        width: 100%;
+        text-align: center;
+    }
+
+    #techdeck p, #techdeck ul {
+        font-size: 1rem;
+    }
+}
+
+
 
 .show-menu {
     display: flex !important;
