@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-
-/* Main sidan börjar!! */
 #secret-button {
     width: 0.1px;
     height: 0.1px;
@@ -141,7 +139,7 @@ nav ul li a:hover{
     color: rgb(236, 243, 203);
 }
 
-/* Main börjar */
+/* Main sidan börjar!! */
 .homeMain{
     background-color: rgb(3, 255, 255);
     padding: 1em;
@@ -845,6 +843,183 @@ button:hover {
 
 .show-menu {
     display: flex !important;
+}
+
+/* -------------------------- Mitt CSS Print ------------ */
+
+@media print {
+    body, *{
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    #secret-button {
+        display: none;
+    }
+    
+    /* Header börjar */
+    header{
+        display: none;
+    }
+    
+    nav ul{
+        display: none;
+    }
+    
+    /* Header slutar */
+    .grid-container{
+        display: block;
+    
+    }
+    
+    /* Aside börjar */
+    .homeAside{
+        display: none;
+        
+    }
+    
+    .fun-fact{
+        padding: 1em;
+        margin: 1em;
+        color: rgb(255, 204, 102);
+        font-size: 1.2em;
+        font-family: "Englebert", serif;
+        line-height: 1.8;
+        border: #5254ac solid 2px;
+        border-radius: 1em;
+    }
+    
+    .siteFooter {
+        page-break-inside: avoid;
+    }
+    
+    .footerLinks a {
+        color: #4da6ff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+    
+    .footerLinks a:hover {
+        color: #ffcc00;
+    }
+    
+    .socialLinks a {
+        display: none;
+    }
+    
+    .socialLinks i {
+        display: none;
+    }
+    
+    
+    .followHeader {
+        display: none;
+    }
+
+    .footerQuote em {
+        font-size: 1.2em;
+        color: #ffcc00;
+        font-style: italic;
+        
+    }
+    
+    .footerBottom {
+        display: none;
+    }
+    
+    /* ---------------------- Om mig sidan -------------------- */
+    
+    .aboutMain{
+        page-break-inside: avoid;
+        
+    }
+    
+    .aboutMainContent {
+        page-break-inside: avoid;
+    }
+
+    /* --------Main exprience börjar --------------- */
+    
+    .experienceMain {
+        page-break-inside: avoid;
+    }
+    
+    
+    .experienceDiv {
+        page-break-inside: avoid;
+    }
+    
+    
+    .experienceHeader {
+        text-decoration: underline;
+        text-decoration-color: #474aff;
+        font-size: 5vw;
+        font-family: "Emblema One", serif;
+        text-align: center;
+    }
+    
+    
+    #gridContainer {
+        display: block;
+    }
+    
+    
+    .job {
+        padding: 2em;
+        
+    }
+    
+    /* ------------------------TechDeck börjar här--------------- */
+   
+    #techdeck {
+        display: block;
+        page-break-inside: avoid;
+        border: none;
+    }
+    
+    #techdeck p, #techdeck ul {
+        color: #333;
+        font-size: 1.0rem;
+    }
+    
+    .projekt img {
+        display: none;
+    }
+    
+    .projekt h3 {
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    
+    .popup-container {
+        display: none;
+    }
+    
+    .popup-button {
+        display: none;
+    }
+    
+    .popup {
+        display: none;
+    }
+    
+    /* Popup-innehåll */
+    .popup-content {
+        display: none;
+    }
+    
+    .popup-content p {
+        display: none;
+    }
+
+    .close {
+        display: none;
+    }
+    
 }
 
 

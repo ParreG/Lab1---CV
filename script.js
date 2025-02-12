@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// ------------------ Easter Egg ------------------ //
+// ------------------ Easter Egg knapp ------------------ //
 document.addEventListener("DOMContentLoaded", function () {
   const secretButton = document.getElementById("secret-button");
 
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
       console.warn("Knappen hittades inte! Kontrollera HTML och att JavaScript-filen laddas.");
   }
 
-  // Påskägg för tangentbordskombination "1337"
+  // ----------------- Påskägg för tangentbordskombination "1337" ----------------- //
   let sequence = "";
   document.addEventListener("keydown", function (event) {
       sequence += event.key;
